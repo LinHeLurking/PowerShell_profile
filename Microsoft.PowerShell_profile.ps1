@@ -22,6 +22,13 @@ function Use-Docker {
     Import-Module DockerCompletion
 }
 
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+If (Test-Path "C:\Users\LinHe\miniconda3\Scripts\conda.exe") {
+    (& "C:\Users\LinHe\miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | ?{$_} | Invoke-Expression
+}
+#endregion
+
 # Clear blue bg for `ls` directories
 $PSStyle.FileInfo.Directory = "`e[34m"
 
