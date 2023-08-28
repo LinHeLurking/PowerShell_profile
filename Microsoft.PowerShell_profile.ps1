@@ -34,5 +34,20 @@ $PSStyle.FileInfo.Directory = "`e[34m"
 
 Use-Git
 
+# Remember to change python env settings
+# {
+#     "background": "#FFDE57",
+#     "foreground": "#111111",
+#     "invert_powerline": true,
+#     "powerline_symbol": "\ue0b2",
+#     "properties": {
+#       "display_mode": "environment",
+#       "fetch_virtual_env": true,
+#       "home_enabled": true
+#     },
+#     "style": "powerline",
+#     "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ else }}{{ .Full }}{{ end }}{{ end }} ",
+#     "type": "python"
+#   },
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/powerlevel10k_rainbow.omp.json" | Invoke-Expression
 
