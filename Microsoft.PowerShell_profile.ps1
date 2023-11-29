@@ -37,14 +37,14 @@ function Use-Conda {
 }
 
 function Get-All {
-    # Clear blue bg for `ls` directories
-    $PSStyle.FileInfo.Directory = "`e[34m"
-
     Use-Gpg
     Use-Git
     Use-Conda
     # Use-VS
 }
+
+# Clear blue bg for `ls` directories
+$PSStyle.FileInfo.Directory = "`e[34m"
 
 Start-Job -ScriptBlock { Get-All } | Out-Null
 
